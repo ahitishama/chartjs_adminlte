@@ -1,0 +1,467 @@
+
+    <section class="content-header">
+      <h1>
+        NJY
+        <small>STATUS OF NIRANTHARA JYOTHI</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Charts</a></li>
+        <li class="active">NJY</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- AREA CHART -->
+
+          <div class="box box-primary">
+            <div class="box-header with-border">
+            <h4 style="display:inline">Name of the Circle/ Division</h4>
+              <select  id="chartType" ><!-- class="form-control" -->
+                <option value="pie1"> Madhugiri</option>
+                <option value="pie2">BRC</option>
+                <option value="pie3">Ramanagara</option>
+                <option value="pie4">Kolar</option>
+                <option value="pie5">Tumkur &  Tiptur Div.</option>
+                <option value="pie6">Davangere</option>
+              </select>
+
+            </div>
+          </div>
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">STATUS OF NIRANTHARA JYOTHI – Phase-3 at the end of January -2018
+                
+              </h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <div class="form-group">
+                <label>Last Month Report  </label>
+                
+              </div>
+              <div class="chart">
+
+                <div id="js-legend" class="chart-legend" align="center"></div>
+                <canvas id="barChart1" style="height:300px"></canvas>
+
+                <!--   <canvas id="areaChart" style="height:250px"></canvas> -->
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+
+
+        </div>
+        <!--  second chart -->
+        <div class="col-md-12">
+          <!-- AREA CHART -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">STATUS OF NIRANTHARA JYOTHI – Phase-3 at the end of January -2018
+              
+              </h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <div class="form-group">
+                <label>Last Month Report  </label>
+               
+              </div>
+              <div class="chart">
+                 <div id="js-legend" class="chart-legend" align="center"></div>
+                <canvas id="barChart2" style="height:300px"></canvas>
+
+                
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+
+
+        </div>
+
+
+      </div>
+      <!-- /.row -->
+
+    </section>
+  
+<script>
+  $(function () {
+    /* ChartJS
+     * -------
+     * Here we will create a few charts using ChartJS
+     */
+
+    //--------------
+    //- AREA CHART -
+    //--------------
+   var ctx = document.getElementById("barChart1").getContext("2d");
+
+   /*data*/
+   var MadhugiriI = [51,0,0];
+   var brcI=[22,4,8];
+   var RamanagaraI=[62,17,8];
+   var KolarI=[64,25,5];
+   var Tumkur_TipturI=[87,8,3];
+   var DavangereI=[101,33,20];
+
+
+  
+
+ var dataMap = {
+     'pie1':  {
+          method: 'Bar',
+         data: {
+             labels: ["NO. of Proposed NJY FEEDERS ","No of Feeders commissioned From 1.8.17 to 24.01.18","commissioned"],
+             datasets: [{
+                 label: "Madhugiri ",
+                fillColor: "#46BFBD",
+                 strokeColor: "#46BFBD",
+                 highlightFill: "#46BFBD",
+                 highlightStroke: "#46BFBD",
+                 data:MadhugiriI
+             }
+             ],
+         }
+     },
+
+     'pie2': {
+       method: 'Bar',
+         data: {
+             labels: ["NO. of Proposed NJY FEEDERS ","No of Feeders commissioned From 1.8.17 to 24.01.18","commissioned"],
+             datasets: [{
+                 label: "BRC",
+                 fillColor: "#46BFBD",
+                 strokeColor: "#46BFBD",
+                 highlightFill: "#46BFBD",
+                 highlightStroke: "#46BFBD",
+                 data: brcI
+             }],
+         }
+     },
+          'pie3':  {
+          method: 'Bar',
+         data: {
+             labels: ["NO. of Proposed NJY FEEDERS ","No of Feeders commissioned From 1.8.17 to 24.01.18","commissioned"],
+             datasets: [{
+                 label: "RamanagaraI",
+                fillColor: "#46BFBD",
+                 strokeColor: "#46BFBD",
+                 highlightFill: "#46BFBD",
+                 highlightStroke: "#46BFBD",
+                 data: RamanagaraI
+             }],
+         }
+     },
+          'pie4':  {
+          method: 'Bar',
+         data: {
+             labels: ["NO. of Proposed NJY FEEDERS ","No of Feeders commissioned From 1.8.17 to 24.01.18","commissioned"],
+             datasets: [{
+                 label: "Kolar",
+                fillColor: "#46BFBD",
+                 strokeColor: "#46BFBD",
+                 highlightFill: "#46BFBD",
+                 highlightStroke: "#46BFBD",
+                 data: KolarI
+             }],
+         }
+     },
+          'pie5':  {
+          method: 'Bar',
+         data: {
+             labels: ["NO. of Proposed NJY FEEDERS ","No of Feeders commissioned From 1.8.17 to 24.01.18","commissioned"],
+             datasets: [{
+                 label: "Tumkur_Tiptur",
+                fillColor: "#46BFBD",
+                 strokeColor: "#46BFBD",
+                 highlightFill: "#46BFBD",
+                 highlightStroke: "#46BFBD",
+                 data: Tumkur_TipturI
+             }],
+         }
+     },
+     'pie6':  {
+          method: 'Bar',
+         data: {
+             labels: ["NO. of Proposed NJY FEEDERS ","No of Feeders commissioned From 1.8.17 to 24.01.18","commissioned"],
+             datasets: [{
+                 label: "Davangere",
+                fillColor: "#46BFBD",
+                 strokeColor: "#46BFBD",
+                 highlightFill: "#46BFBD",
+                 highlightStroke: "#46BFBD",
+                 data: DavangereI
+             }],
+         }
+     }
+ }; 
+
+  
+
+
+
+
+   
+var currentChart;
+
+ function updateChart() {
+     if(currentChart){currentChart.destroy();}
+   
+     var determineChart = $("#chartType").val();
+
+     var params = dataMap[determineChart]
+     console.log(params);
+      currentChart = new Chart(ctx)[params.method](params.data, {});
+      console.log(currentChart);
+      var legend=currentChart;
+          document.getElementById("js-legend").innerHTML = legend.generateLegend();
+
+ }
+
+
+ $('#chartType').on('click', updateChart)
+ updateChart();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  })
+
+</script>
+<script>
+  $(function () {
+    /* ChartJS--------------------2
+     * -------
+     * Here we will create a few charts using ChartJS
+     */
+
+    //--------------
+    //- AREA CHART -
+    //--------------
+   var ctx2 = document.getElementById("barChart2").getContext("2d");
+
+   /*data*/
+ var MadhugiriH = [51,0,0];
+
+  
+  var brcH=[22,3,5];
+
+  
+  var RamanagaraH=[62,3,4];
+
+
+var KolarH=[64,25,3];
+
+
+var Tumkur_TipturH=[87,7,1];
+
+
+var DavangereH=[101,9,9];
+
+
+
+
+ var dataMap = {
+     'pie1':  {
+          method: 'Bar',
+         data: {
+             labels: ["NO. of Proposed NJY FEEDERS 2_H","No of Feeders completed From 1.8.17 to 24.01.18","completed"],
+             datasets: [{
+                 label: "Madhugiri ",
+                fillColor: "#46BFBD",
+                 strokeColor: "#46BFBD",
+                 highlightFill: "#46BFBD",
+                 highlightStroke: "#46BFBD",
+                 data:MadhugiriH
+             }
+             ],
+         }
+     },
+
+     'pie2': {
+       method: 'Bar',
+         data: {
+             labels: ["NO. of Proposed NJY FEEDERS 2_H","No of Feeders completed From 1.8.17 to 24.01.18","completed"],
+             datasets: [{
+                 label: "BRC",
+                 fillColor: "#46BFBD",
+                 strokeColor: "#46BFBD",
+                 highlightFill: "#46BFBD",
+                 highlightStroke: "#46BFBD",
+                 data: brcH
+             }],
+         }
+     },
+          'pie3':  {
+          method: 'Bar',
+         data: {
+             labels: ["NO. of Proposed NJY FEEDERS 2_H","No of Feeders completed From 1.8.17 to 24.01.18","completed"],
+             datasets: [{
+                 label: "Ramanagara",
+                fillColor: "#46BFBD",
+                 strokeColor: "#46BFBD",
+                 highlightFill: "#46BFBD",
+                 highlightStroke: "#46BFBD",
+                 data: RamanagaraH
+             }],
+         }
+     },
+          'pie4':  {
+          method: 'Bar',
+         data: {
+             labels: ["NO. of Proposed NJY FEEDERS 2_H","No of Feeders completed From 1.8.17 to 24.01.18","completed"],
+             datasets: [{
+                 label: "Kolar",
+                fillColor: "#46BFBD",
+                 strokeColor: "#46BFBD",
+                 highlightFill: "#46BFBD",
+                 highlightStroke: "#46BFBD",
+                 data: KolarH
+             }],
+         }
+     },
+          'pie5':  {
+          method: 'Bar',
+         data: {
+             labels: ["NO. of Proposed NJY FEEDERS 2_H","No of Feeders completed From 1.8.17 to 24.01.18","completed"],
+             datasets: [{
+                 label: "Tumkur_Tiptur",
+                fillColor: "#46BFBD",
+                 strokeColor: "#46BFBD",
+                 highlightFill: "#46BFBD",
+                 highlightStroke: "#46BFBD",
+                 data: Tumkur_TipturH
+             }],
+         }
+     },
+     'pie6':  {
+          method: 'Bar',
+         data: {
+             labels: ["NO. of Proposed NJY FEEDERS ","No of Feeders commissioned From 1.8.17 to 24.01.18","commissioned"],
+             datasets: [{
+                 label: "Davangere",
+                fillColor: "#46BFBD",
+                 strokeColor: "#46BFBD",
+                 highlightFill: "#46BFBD",
+                 highlightStroke: "#46BFBD",
+                 data: DavangereH
+             }],
+         }
+     }
+ }; 
+
+  
+
+
+
+
+   
+var currentChart;
+
+ function updateChart() {
+     if(currentChart){currentChart.destroy();}
+   
+     var determineChart = $("#chartType").val();
+
+     var params = dataMap[determineChart]
+     console.log(params);
+      currentChart = new Chart(ctx2)[params.method](params.data, {});
+      console.log(currentChart);
+      var legend=currentChart;
+          document.getElementById("js-legend").innerHTML = legend.generateLegend();
+
+ }
+
+
+ $('#chartType').on('click', updateChart)
+ updateChart();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  })
+
+</script>
+</body>
+</html>
+<style type="text/css">
+  #js-legend ul {
+  list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#js-legend ul li {
+  display: inline;
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 4px;
+  border-radius: 5px;
+  padding: 2px 8px 2px 28px;
+  font-size: 14px;
+  cursor: default;
+  -webkit-transition: background-color 200ms ease-in-out;
+  -moz-transition: background-color 200ms ease-in-out;
+  -o-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+
+#js-legend li span {
+display: inline;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  border-radius: 5px;
+}
+
+</style>

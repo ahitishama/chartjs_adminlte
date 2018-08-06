@@ -1,0 +1,43 @@
+
+      <div class="row">
+        <div class="col-md-12">
+          <!-- East Circle Graph -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">{{circle}}
+                <small>Circle</small>
+              </h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <div class="form-group">
+                <label>Circle Name</label>
+   <select class="selectpicker chartTypeClick" id="chartType{{chartindex}}" data-circle="{{circle}}" data-size="{{chartindex}}">
+            {{selectData}}
+          </select>
+            </div>
+            <div class="chart">
+
+              <!--  select bar chart -->
+              
+
+              <div id="js-legend{{chartindex}}" class="chart-legend" align="center"></div>
+              <canvas id="barChart{{chartindex}}" style="height:400px;"></canvas>
+
+              <!--   <canvas id="areaChart" style="height:250px"></canvas> -->
+            </div>
+          </div>
+          <!-- /.box-body -->
+        </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col (LEFT) -->
+       
+        <!-- /.col (RIGHT) -->
+      </div>
+

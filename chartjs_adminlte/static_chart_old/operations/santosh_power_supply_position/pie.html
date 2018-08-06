@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Admin | Bescom</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Google Font -->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="../../index2.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>BES</b>COM</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg">
+       <img src="../../dist/img/bescom.png" alt="BESCOM : Bangalore Electricity Supply Company Limited" title="BESCOM : Bangalore Electricity Supply Company Limited" width="200">
+      </span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+ 
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="../../dist/img/avatar3.png" class="user-image" alt="User Image">
+              <span class="hidden-xs">supervisor</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header">
+                <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                <p>
+                  supervisor - Web Developer
+                  <small>Member since Nov. 2012</small>
+                </p>
+              </li>
+              <!-- Menu Body -->
+              <li class="user-body">
+                <div class="row">
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Followers</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Sales</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Friends</a>
+                  </div>
+                </div>
+                <!-- /.row -->
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                </div>
+                <div class="pull-right">
+                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+          <li>
+            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="../../dist/img/avatar3.png" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>supervisor</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+          <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="header">MAIN NAVIGATION</li>
+      
+        <li class="active treeview menu-open">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="../../index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
+           <!--  <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li> -->
+          </ul>
+        </li>
+
+
+        <li class="treeview active">
+          <a href="#">
+            <i class="fa fa-pie-chart"></i>
+            <span>BESCOM</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+           <li><a href="a&rt.html"><i class="fa fa-circle-o"></i> A & RT</a></li>
+           <li><a href="procurement.html"><i class="fa fa-circle-o"></i> Procurement</a></li>
+           
+           <li><a href="powersupply.html"><i class="fa fa-circle-o"></i>Power supply position</a></li>
+           <li><a href="powerpurchase.html"><i class="fa fa-circle-o"></i>Power Purchase</a></li>
+              <li><a href="dcm.html"><i class="fa fa-circle-o"></i>DCM</a></li>
+
+        <!--     <li class="active"><a href="chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
+        <li><a href="morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
+        <li><a href="flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
+        <li><a href="inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li> -->
+          </ul>
+        </li>
+           <!-- M & C - EA  -->           
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-laptop"></i>
+            <span>M & C - EA</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="../mc_ea/ctazjan_mc.html "><i class="fa fa-circle-o"></i>CTAZ-JAN</a></li>
+            <li><a href="../mc_ea/brazjan_mc.html "><i class="fa fa-circle-o"></i>BRAZ-JAN</a></li>
+            <li><a href="../mc_ea/bmaz_mc.html "><i class="fa fa-circle-o"></i>BMAZ</a></li>
+            <li><a href="../mc_ea/24towns_mc.html "><i class="fa fa-circle-o"></i>24 TOWNS</a></li>
+          </ul>
+        </li>
+
+        <!-- /M & C - EA  -->  
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           <!--  <li class="treeview active">
+                     <a href="#">
+           <i class="fa fa-edit"></i> <span>Operations</span>
+           <span class="pull-right-container">
+             <i class="fa fa-angle-left pull-right"></i>
+           </span>
+                     </a>
+                     <ul class="treeview-menu">
+           <li><a href="../operations/bmazoperation.html"><i class="fa fa-circle-o"></i> BMAZ(zones)</a></li>
+           <li class="active"><a href="advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
+           <li><a href="editors.html"><i class="fa fa-circle-o"></i> Editors</a></li> -->
+          </ul>
+        </li>
+ 
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+         A&RT - 
+        <small>CONSUMER, LOAD, CONSUMPTION, DEMAND</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Charts</a></li>
+        <li class="active">a&rt</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-md-6">
+          <!-- AREA CHART -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Cumulative (Apr-17 to Jan-18) LT
+                  <small>In Crores.</small>
+              </h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <!-- <div class="chart">
+                <div id="js-legend" class="chart-legend"></div>
+               <canvas id="barChart1" style="height:230px"></canvas>
+              
+                          <canvas id="areaChart" style="height:250px"></canvas>
+              </div> -->
+               <!--  select pie chart -->
+                   <div class="form-group">
+                    <label>Category-LT</label>
+                    <select  id="chartType"><!-- class="form-control"  -->
+                      <option value="pie1">Domestic (LT1+LT2)</option>
+                      <option value="pie2">Commercial (LT3)</option>
+                   <!--    <option>Agriculture (LT4)</option>
+                   <option>Water Supply (LT6A)</option>
+                   <option>Street Light (LT6B)</option>
+                   <option>Others (LT7)</option>
+                   <option>LT Total</option> -->
+                     
+                    </select>
+                  </div>
+                  <div class="row">
+                  <div class="col-md-8">
+                     <div class="chart" id="fieldname"> 
+                       <canvas id="myChart" style="height:330px"></canvas>
+                     </div></div>
+                    <div class="col-md-4"> <div id="js-legend" class="chart-legend"></div></div>
+                  </div>
+               
+             
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+
+          <!-- DONUT CHART -->
+          <!-- <div class="box box-danger">
+            <div class="box-header with-border">
+              <h3 class="box-title">Poles</h3>
+              <small>Units in Nos.</small>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+             <div class="chart">
+               <div id="js-legend3" class="chart-legend"></div>
+             <canvas id="pieChart" style="height:250px"></canvas>
+               <canvas id="barChart3" style="height:230px"></canvas></div>
+            </div>
+            /.box-body
+          </div> -->
+          <!-- /.box -->
+
+        </div>
+        <!-- /.col (LEFT) -->
+        <div class="col-md-6">
+          <!-- LINE CHART -->
+          <div class="box box-info">
+            <div class="box-header with-border">
+              <h3 class="box-title">Cumulative (Apr-17 to Jan-18)    HT
+                  <small>In Crores.</small>
+              </h3>
+                  
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <!-- <div class="chart">
+               <div id="js-legend2" class="chart-legend"></div>
+              <canvas id="barChart2" style="height:230px"></canvas>
+                <canvas id="lineChart" style="height:250px"></canvas>
+              </div> -->
+              <!--  select pie chart -->
+                   <div class="form-group">
+                    <label>Category-HT</label>
+                    <select  id="chartType2"><!-- class="form-control"  -->
+
+                     <option value="pie21"> Water Supply (HT)</option>
+                     <option value="pie22"> HT Industries (HT2A)</option>
+                    <!--  <option> HT Commercial (HT2B)</option>
+                    <option>Residential Apartments (HT4)</option>
+                    <option> Others (HT2C+HT5+HT3)</option>
+                    <option>HT Total</option>
+                    <option> Grand Total</option> -->
+                   </select>
+                 </div>
+                 <div class="row">
+                  <div class="col-md-8">
+                    <div class="chart" id="fieldname"> 
+                     
+                     <canvas id="myChart2" style="height:330px"></canvas>
+                   </div></div>
+                   <div class="col-md-4"> <div id="js-legend2" class="chart-legend"></div></div>
+                 </div>
+
+
+                  
+             
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+
+          <!-- BAR CHART -->
+         <!--  <div class="box box-success">
+           <div class="box-header with-border">
+             <h3 class="box-title">Cable</h3>
+                     <small>Units in Mtrs</small><br/><small>XLPE armoured HT UG Al  <span style="color:green">& </span> LT AB </small><strong>Cabel</strong>
+             <div class="box-tools pull-right">
+               <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+               </button>
+               <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+             </div>
+           </div>
+           <div class="box-body">
+             <div class="chart">
+             <div id="js-legend4" class="chart-legend"></div>
+               <canvas id="barChart4" style="height:230px"></canvas>
+             </div>
+           </div>
+           /.box-body
+         </div> -->
+          <!-- /.box -->
+
+        </div>
+        <!-- /.col (RIGHT) -->
+      </div>
+      <!-- /.row -->
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 2.4.0
+    </div>
+    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+    reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Create the tabs -->
+    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+      <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!-- Home tab content -->
+      <div class="tab-pane" id="control-sidebar-home-tab">
+        <h3 class="control-sidebar-heading">Recent Activity</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                <p>Will be 23 on April 24th</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-user bg-yellow"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
+
+                <p>New phone +1(800)555-1234</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
+
+                <p>nora@example.com</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-file-code-o bg-green"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
+
+                <p>Execution time 5 seconds</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+        <h3 class="control-sidebar-heading">Tasks Progress</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript:void(0)">
+              <h4 class="control-sidebar-subheading">
+                Custom Template Design
+                <span class="label label-danger pull-right">70%</span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h4 class="control-sidebar-subheading">
+                Update Resume
+                <span class="label label-success pull-right">95%</span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-success" style="width: 95%"></div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h4 class="control-sidebar-subheading">
+                Laravel Integration
+                <span class="label label-warning pull-right">50%</span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h4 class="control-sidebar-subheading">
+                Back End Framework
+                <span class="label label-primary pull-right">68%</span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+      </div>
+      <!-- /.tab-pane -->
+      <!-- Stats tab content -->
+      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+      <!-- /.tab-pane -->
+      <!-- Settings tab content -->
+      <div class="tab-pane" id="control-sidebar-settings-tab">
+        <form method="post">
+          <h3 class="control-sidebar-heading">General Settings</h3>
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Report panel usage
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+
+            <p>
+              Some information about this general settings option
+            </p>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Allow mail redirect
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+
+            <p>
+              Other sets of options are available
+            </p>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Expose author name in posts
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+
+            <p>
+              Allow the user to show his name in blog posts
+            </p>
+          </div>
+          <!-- /.form-group -->
+
+          <h3 class="control-sidebar-heading">Chat Settings</h3>
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Show me as online
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Turn off notifications
+              <input type="checkbox" class="pull-right">
+            </label>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Delete chat history
+              <a href="javascript:void(0)" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
+            </label>
+          </div>
+          <!-- /.form-group -->
+        </form>
+      </div>
+      <!-- /.tab-pane -->
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 3 -->
+<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- ChartJS -->
+<script src="../../bower_components/chart.js/Chart.js"></script>
+<!-- FastClick -->
+<script src="../../bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+<!-- page script -->
+<script>
+  var ctx = document.getElementById("myChart").getContext("2d");
+ ctx.canvas.width = 600;
+ ctx.canvas.height = 200;
+
+
+
+
+ var dataMap = {
+     'pie1': {
+        method: 'Pie',
+
+         data: [{
+             value: '8297713',
+             color: "#F7464A",
+             highlight: "#FF5A5E",
+             label: "Total No of Installation"
+         }, {
+             value: '7321701',
+             color: "#46BFBD",
+             highlight: "#5AD3D1",
+             label: " No of live Installations"
+         }, 
+         {
+             value: '10076852',
+             color: "rgba(210, 214, 222, 1)",
+             highlight: "rgba(210, 214, 222, 1)",
+             label: " Connected Load KW"
+         },
+         {
+             value: '483834',
+             color: "#e6e600",
+             highlight: "#e6e600",
+             label: " Connected Load HP"
+         },
+         {
+             value: '2',
+             color: "#8e5ea2",
+             highlight: "#8e5ea2",
+             label: " Connected Load KVA"
+         },
+         {
+             value: '5785',
+             color: "#e8c3b9",
+             highlight: "#e8c3b9",
+             label: "Net Consumption"
+         },
+         {
+             value: '3456',
+             color: "#c45850",
+             highlight: "#c45850",
+             label: " Demand Revenue Total"
+         },{
+             value: '3446',
+             color: "#FDB45C",
+             highlight: "black",
+             label: "Collection Total"
+         }],
+
+     },
+     'pie2': {
+         method: 'Pie',
+         data: [{
+             value: 1038266,
+             color: "#F7464A",
+             highlight: "#FF5A5E",
+             label: "Total No of Installation"
+         }, {
+             value: 904851,
+             color: "#46BFBD",
+             highlight: "#5AD3D1",
+             label: " No of live Installations"
+         }, 
+        
+         {
+             value: 2101327,
+             color: "#e6e600",
+             highlight: "#e6e600",
+             label: " Connected Load HP"
+         },
+         {
+             value: 264293,
+             color: "#8e5ea2",
+             highlight: "#8e5ea2",
+             label: " Connected Load KVA"
+         },
+         {
+             value: 45,
+             color: "#e8c3b9",
+             highlight: "#e8c3b9",
+             label: "Net Consumption"
+         },
+         {
+             value: 1700.78,
+             color: "#c45850",
+             highlight: "#c45850",
+             label: " Demand Revenue Total"
+         },{
+             value: 1585.95,
+             color: "#FDB45C",
+             highlight: "black",
+             label: "Collection Total"
+         },
+          {
+             value: 1593.32,
+             color: "rgba(210, 214, 222, 1)",
+             highlight: "rgba(210, 214, 222, 1)",
+             label: " Connected Load KW"
+         }],
+     }
+
+ };
+
+
+
+
+
+var currentChart;
+
+ function updateChart() {
+     if(currentChart){currentChart.destroy();}
+   
+     var determineChart = $("#chartType").val();
+
+     var params = dataMap[determineChart]
+     currentChart = new Chart(ctx)[params.method](params.data, {});
+     document.getElementById("js-legend").innerHTML = currentChart.generateLegend();
+ }
+
+ $('#chartType').on('change', updateChart)
+ updateChart();
+
+
+</script>
+<!-- pie chart to container -->
+<script>
+  var ctx2 = document.getElementById("myChart2").getContext("2d");
+ ctx2.canvas.width = 600;
+ ctx2.canvas.height = 200;
+
+/*230 214 0 0 200923  567.07  314.95  314.03
+*/
+
+
+ var dataMap2 = {
+     'pie21': {
+        method: 'Pie',
+
+         data: [{
+             value: '230',
+             color: "#F7464A",
+             highlight: "#FF5A5E",
+             label: "Total No of Installation"
+         }, {
+             value: '214',
+             color: "#46BFBD",
+             highlight: "#5AD3D1",
+             label: " No of live Installations"
+         }, 
+         {
+             value: '0',
+             color: "rgba(210, 214, 222, 1)",
+             highlight: "rgba(210, 214, 222, 1)",
+             label: " Connected Load KW"
+         },
+         {
+             value: '0',
+             color: "#e6e600",
+             highlight: "#e6e600",
+             label: " Connected Load HP"
+         },
+         {
+             value: '200923',
+             color: "#8e5ea2",
+             highlight: "#8e5ea2",
+             label: " Connected Load KVA"
+         },
+         {
+             value: '567.07',
+             color: "#e8c3b9",
+             highlight: "#e8c3b9",
+             label: "Net Consumption"
+         },
+         {
+             value: '314.95',
+             color: "#c45850",
+             highlight: "#c45850",
+             label: " Demand Revenue Total"
+         },{
+             value: '314.03',
+             color: "#FDB45C",
+             highlight: "black",
+             label: "Collection Total"
+         }],
+
+     },
+     'pie22': {
+         method: 'Pie',
+         data: [{
+             value: 6589,
+             color: "#F7464A",
+             highlight: "#FF5A5E",
+             label: "Total No of Installation"
+         }, {
+             value: 5847,
+             color: "#46BFBD",
+             highlight: "#5AD3D1",
+             label: " No of live Installations"
+         }, 
+        
+         {
+             value: 0,
+             color: "#e6e600",
+             highlight: "#e6e600",
+             label: " Connected Load HP"
+         },
+         {
+             value: 0,
+             color: "#8e5ea2",
+             highlight: "#8e5ea2",
+             label: " Connected Load KVA"
+         },
+         {
+             value: 3042175,
+             color: "#e8c3b9",
+             highlight: "#e8c3b9",
+             label: "Net Consumption"
+         },
+         {
+             value: 3757.23,
+             color: "#c45850",
+             highlight: "#c45850",
+             label: " Demand Revenue Total"
+         },{
+             value: 3473.19,
+             color: "#FDB45C",
+             highlight: "black",
+             label: "Collection Total"
+         },
+          {
+             value: 3446.55,
+             color: "rgba(210, 214, 222, 1)",
+             highlight: "rgba(210, 214, 222, 1)",
+             label: " Connected Load KW"
+         }],
+     }
+
+ };
+
+/*6589  5847  0 0 3042175 3757.23 3473.19 3446.55
+*/
+
+
+
+var currentChart2;
+
+ function updateChart2() {
+     if(currentChart2){currentChart2.destroy();}
+   
+     var determineChart2 = $("#chartType2").val();
+
+     var params2 = dataMap2[determineChart2]
+     currentChart2 = new Chart(ctx2)[params2.method](params2.data, {});
+     document.getElementById("js-legend2").innerHTML = currentChart2.generateLegend();
+ }
+
+ $('#chartType2').on('change', updateChart2)
+ updateChart2();
+
+
+</script>
+
+</body>
+</html>
+<style type="text/css">
+  #js-legend ul {
+  list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#js-legend ul li {
+/* display: inline;
+     */    padding-left: 30px;
+    position: relative;
+    margin-bottom: 4px;
+    border-radius: 5px;
+    padding: 2px 3px 2px 15px;
+    font-size: 10px;
+    cursor: default;
+  -webkit-transition: background-color 200ms ease-in-out;
+  -moz-transition: background-color 200ms ease-in-out;
+  -o-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+
+#js-legend li span {
+display: inline;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 12px;
+  height: 100%;
+  border-radius: 5px;
+}
+</style>
+<style type="text/css">
+  #js-legend2 ul {
+  list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#js-legend2 ul li {
+/* display: inline; */
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 4px;
+    border-radius: 5px;
+    padding: 2px 3px 2px 15px;
+    font-size: 10px;
+    cursor: default;
+  -webkit-transition: background-color 200ms ease-in-out;
+  -moz-transition: background-color 200ms ease-in-out;
+  -o-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+
+#js-legend2 li span {
+display: inline;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 12px;
+  height: 100%;
+  border-radius: 5px;
+}
+</style>

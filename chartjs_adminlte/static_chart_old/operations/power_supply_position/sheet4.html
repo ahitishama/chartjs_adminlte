@@ -1,0 +1,331 @@
+
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-md-6">
+          <!-- AREA CHART -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Zone wise Stations in BESCOM As on 31.01.2018
+              </h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <!-- <div class="chart">
+                <div id="js-legend" class="chart-legend"></div>
+               <canvas id="barChart1" style="height:230px"></canvas>
+              
+                          <canvas id="areaChart" style="height:250px"></canvas>
+              </div> -->
+               <!--  select pie chart -->
+                   <div class="form-group">
+                    <label>STATION</label>
+                    <select  id="chartType"><!-- class="form-control"  -->
+                      <option value="pie1">220 kV</option>
+                      <option value="pie2">110 kV</option>
+                      <option value="pie3">66 kV</option>
+                      <option value="pie4">TOTAL</option>
+                    </select>
+                  </div>
+                  <div class="row">
+                  <div class="col-md-8">
+                     <div class="chart" id="fieldname"> 
+                       <canvas id="myChart" style="height:330px"></canvas>
+                     </div></div>
+                    <div class="col-md-4"> <div id="js-legend" class="chart-legend"></div></div>
+                  </div>
+               
+             
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+
+
+        </div>
+        <!-- /.col (LEFT) -->
+        
+
+
+        <!-- /.col (RIGHT) -->
+      </div>
+
+        <!-- /.col (RIGHT) -->
+      </div>
+
+
+
+      <!-- /.row -->
+
+    </section>
+   
+<!-- jQuery 3 -->
+<script src="../../../bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- ChartJS -->
+<script src="../../../bower_components/chart.js/Chart.js"></script>
+<!-- FastClick -->
+<script src="../../../bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../../dist/js/demo.js"></script>
+<!-- page script -->
+<script>
+  var ctx = document.getElementById("myChart").getContext("2d");
+ ctx.canvas.width = 600;
+ ctx.canvas.height = 200;
+
+
+
+
+ var dataMap = {
+     'pie1': {
+        method: 'Pie',
+
+         data: [{
+             value: '17',
+             color: "#F7464A",
+             highlight: "#FF5A5E",
+             label: "BMAZ"
+         }, {
+             value: '13',
+             color: "#46BFBD",
+             highlight: "#5AD3D1",
+             label: "BRAZ"
+         }, 
+         {
+             value: '11',
+             color: "rgba(210, 214, 222, 1)",
+             highlight: "rgba(210, 214, 222, 1)",
+             label: "CTAZ"
+         },
+         {
+             value: '41',
+             color: "#e6e600",
+             highlight: "#e6e600",
+             label: "TOTAL"
+         }
+        ],
+
+     },
+     'pie2': {
+        method: 'Pie',
+
+         data: [{
+             value: '0',
+             color: "#F7464A",
+             highlight: "#FF5A5E",
+             label: "BMAZ"
+         }, {
+             value: '0',
+             color: "#46BFBD",
+             highlight: "#5AD3D1",
+             label: "BRAZ"
+         }, 
+         {
+             value: '29',
+             color: "rgba(210, 214, 222, 1)",
+             highlight: "rgba(210, 214, 222, 1)",
+             label: "CTAZ"
+         },
+         {
+             value: '29',
+             color: "#e6e600",
+             highlight: "#e6e600",
+             label: "TOTAL"
+         }
+        ],
+
+     },
+     'pie3': {
+        method: 'Pie',
+
+         data: [{
+             value: '83',
+             color: "#F7464A",
+             highlight: "#FF5A5E",
+             label: "BMAZ"
+         }, {
+             value: '145',
+             color: "#46BFBD",
+             highlight: "#5AD3D1",
+             label: "BRAZ"
+         }, 
+         {
+             value: '151',
+             color: "rgba(210, 214, 222, 1)",
+             highlight: "rgba(210, 214, 222, 1)",
+             label: "CTAZ"
+         },
+         {
+             value: '379',
+             color: "#e6e600",
+             highlight: "#e6e600",
+             label: "TOTAL"
+         }
+        ],
+
+     },
+     'pie4': {
+        method: 'Pie',
+
+         data: [{
+             value: '100',
+             color: "#F7464A",
+             highlight: "#FF5A5E",
+             label: "BMAZ"
+         }, {
+             value: '158',
+             color: "#46BFBD",
+             highlight: "#5AD3D1",
+             label: "BRAZ"
+         }, 
+         {
+             value: '191',
+             color: "rgba(210, 214, 222, 1)",
+             highlight: "rgba(210, 214, 222, 1)",
+             label: "CTAZ"
+         },
+         {
+             value: '449',
+             color: "#e6e600",
+             highlight: "#e6e600",
+             label: "TOTAL"
+         }
+        ],
+
+     },
+     
+
+ };
+
+
+
+
+
+var currentChart;
+
+ function updateChart() {
+     if(currentChart){currentChart.destroy();}
+   
+     var determineChart = $("#chartType").val();
+
+     var params = dataMap[determineChart]
+     currentChart = new Chart(ctx)[params.method](params.data, {});
+     document.getElementById("js-legend").innerHTML = currentChart.generateLegend();
+ }
+
+ $('#chartType').on('change', updateChart)
+ updateChart();
+
+
+</script>
+
+
+
+</body>
+</html>
+<style type="text/css">
+  #js-legend ul {
+  list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#js-legend ul li {
+/* display: inline;
+     */    padding-left: 30px;
+    position: relative;
+    margin-bottom: 4px;
+    border-radius: 5px;
+    padding: 2px 3px 2px 15px;
+    font-size: 10px;
+    cursor: default;
+  -webkit-transition: background-color 200ms ease-in-out;
+  -moz-transition: background-color 200ms ease-in-out;
+  -o-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+
+#js-legend li span {
+display: inline;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 12px;
+  height: 100%;
+  border-radius: 5px;
+}
+</style>
+<style type="text/css">
+  #js-legend2 ul {
+  list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#js-legend2 ul li {
+/* display: inline; */
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 4px;
+    border-radius: 5px;
+    padding: 2px 3px 2px 15px;
+    font-size: 10px;
+    cursor: default;
+  -webkit-transition: background-color 200ms ease-in-out;
+  -moz-transition: background-color 200ms ease-in-out;
+  -o-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+
+#js-legend2 li span {
+display: inline;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 12px;
+  height: 100%;
+  border-radius: 5px;
+}
+</style>
+
+<style type="text/css">
+  #js-legend3 ul {
+  list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#js-legend3 ul li {
+/* display: inline; */
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 4px;
+    border-radius: 5px;
+    padding: 2px 3px 2px 15px;
+    font-size: 10px;
+    cursor: default;
+  -webkit-transition: background-color 200ms ease-in-out;
+  -moz-transition: background-color 200ms ease-in-out;
+  -o-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+
+#js-legend3 li span {
+display: inline;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 12px;
+  height: 100%;
+  border-radius: 5px;
+}
+</style>

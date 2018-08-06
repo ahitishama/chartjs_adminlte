@@ -1,0 +1,44 @@
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+<canvas id="myChart"></canvas>
+
+<script type="text/javascript">
+   var result = [{ x: "18:00:22", y: "11" }, { x: "19:00", y: "232" }, { x: "20:00", y: "236" }, { x: "22:00", y: "228" }];
+//console.log(result[0].y)
+// parse labels and data
+var labels = result.map(e => moment(e.x, 'HH:mm'));
+console.log(labels[0]);
+var data = result.map(e => +e.y);
+
+var ctx = document.getElementById("myChart").getContext('2d');
+var myChart = new Chart(ctx, {
+   type: 'line',
+
+   data: {
+      labels: labels,
+      datasets: [{
+         label: 'Voltage Fluctuation',
+         data: data,
+         borderWidth: 1
+      }]
+   },
+   options: {
+      scales: {
+         xAxes: [{
+            type: 'time',
+            time: {
+               unit: 'hour',
+               displayFormats: {
+                  hour: 'HH:mm:ss'
+               }
+            }
+         }],
+      },
+
+   }
+
+
+});
+</script>

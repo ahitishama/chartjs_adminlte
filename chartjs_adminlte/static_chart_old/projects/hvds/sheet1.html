@@ -1,0 +1,225 @@
+
+    <section class="content-header">
+        <h1>
+          ELECTRICITY SUPPLY
+        <small>BANGALORE ELECTRICITY SUPPLY COMPANY LIMITED</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Charts</a></li>
+        <li class="active">sheet1</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- AREA CHART -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">HIGH VOLTAGE DISTRIBUTION SYSTEM (HVDS)
+                  <small>Physical & Financial Progress of HVDS Phase-II works awarded on PTK basis as on 31.01.2018</small>
+                </h3>
+
+                <div class="box-tools pull-right">
+                  <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                </div>
+              </div>
+              <div class="box-body">
+                <div class="form-group">
+                  <label>Name of the Sub Division</label>
+                  <select class="selectpicker test" id="chartType">
+                     <optgroup label="Name of Division -Kanaka pura ">
+                   <option value="pie1"> Kanakapura Urban</option>
+                   <option value="pie2">Kanakapura Rural</option>
+                   <option value="pie3">Harohally</option>
+                   <option value="pie4">Sathnur</option>
+                   </optgroup>
+                    <optgroup label="Name of Division-Tumkur ">
+                   <option value="pie5">Huliyurdurga</option>
+                   </optgroup>
+                   <option value="pie6" >Total</option>
+
+
+
+                 </select>
+
+               </div>
+               <div class="chart">
+
+                 <!--  select bar chart -->
+
+
+                 <div id="js-legend" class="chart-legend" align="center"></div>
+                 <canvas id="barChart1" style="height:430px"></canvas>
+
+                 <!--   <canvas id="areaChart" style="height:250px"></canvas> -->
+               </div>
+             </div>
+             <!-- /.box-body -->
+           </div>
+
+
+  </div>
+
+</div>
+      <!-- /.row -->
+
+    </section>
+
+<script>
+  $(function () {
+    /* ChartJS
+     * -------
+     * Here we will create a few charts using ChartJS
+     */
+
+    //--------------
+    //- AREA CHART -
+    //--------------
+   var ctx = document.getElementById("barChart1").getContext("2d");
+
+    /*data*/
+
+var label = ["BESCOM portion","DWA Cost (Agency)","Total"," No. of feeders Proposed ","No. of Feeders Completed & Commissioned"," No. of feeders work under progress","  No. of feeders work to be taken up","Expenditure-Bescom Portion  ","Expenditure-Agency Portion" , "Total", "Progress of Agency portion"];
+
+var labelData = ["Kanakapura_Urban",
+"Kanakapura_Rural",
+"Harohally",
+"Sathnur", 
+"Huliyurdurga", 
+"Total"]
+
+  
+var rowtwo=[];
+
+rowtwo['0']= [20.44, 24.14, 44.58, 14, 13,  1, 0, 21.59, 20.24, 41.83, 83.84]
+
+rowtwo['1']= [15.64, 20.37, 36.01,   10,  9 ,1 ,0, 13.52 ,16.42 ,29.94, 80.61]
+
+rowtwo['2']= [14.68, 20.03, 34.71 ,  14 , 7 ,6 ,1, 10.03, 9.72, 19.75 ,48.53]
+
+rowtwo['3']= [12.28, 17.05, 29.33 ,  11 , 5 ,4 ,2, 8.46,  8.31 , 16.77, 48.74]
+
+rowtwo['4']= [10.48, 16.65, 27.13,   12 , 11 , 0 ,1, 9.17,  11.92 ,21.09, 71.59]
+
+
+rowtwo['5']= [73.52, 98.24 ,171.76,    61 , 45 , 12 , 4 ,62.77, 66.61 ,129.38 , 67.80]
+
+
+
+
+var dataMap = {};
+for(row=0;row<rowtwo.length;row++){
+  var obj={};
+  obj['method']='Bar';
+  
+  var rowdata = {};
+  rowdata['label'] = labelData[row];
+  rowdata['fillColor'] = 'rgba(60,141,188,0.9)';
+  rowdata['data'] = rowtwo[row];
+
+
+  var mainData={};
+  mainData['labels']=label;
+  mainData['datasets'] = [];
+ mainData['datasets'].push(rowdata);
+
+
+  obj['data']=mainData;
+
+  var newIndex='pie'+(row+1);
+  dataMap[newIndex]=obj;
+}
+console.log(dataMap);
+
+
+
+
+
+
+
+
+
+
+
+
+   
+var currentChart;
+
+ function updateChart() {
+     if(currentChart){currentChart.destroy();}
+   
+     var determineChart = $("#chartType").val();
+
+     var params = dataMap[determineChart]
+      currentChart = new Chart(ctx)[params.method](params.data, {});
+      var legend=currentChart;
+          document.getElementById("js-legend").innerHTML = legend.generateLegend();
+
+ }
+
+
+ $('#chartType').on('click', updateChart)
+ updateChart();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  })
+
+</script>
+</body>
+</html>
+<style type="text/css">
+  #js-legend ul {
+  list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#js-legend ul li {
+  display: inline;
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 4px;
+  border-radius: 5px;
+  padding: 2px 8px 2px 28px;
+  font-size: 14px;
+  cursor: default;
+  -webkit-transition: background-color 200ms ease-in-out;
+  -moz-transition: background-color 200ms ease-in-out;
+  -o-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+
+#js-legend li span {
+display: inline;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  border-radius: 5px;
+}
+
+</style>

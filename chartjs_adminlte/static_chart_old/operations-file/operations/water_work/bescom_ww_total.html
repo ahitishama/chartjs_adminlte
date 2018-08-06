@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Admin | Bescom</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="../../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../../bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../../../bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../../dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../../../dist/css/skins/_all-skins.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Google Font -->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="../../../index2.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>BES</b>COM</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg">
+         <img src="../../../dist/img/bescom.png" alt="BESCOM : Bangalore Electricity Supply Company Limited" title="BESCOM : Bangalore Electricity Supply Company Limited" width="200">
+      </span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+         
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="../../../dist/img/avatar3.png" class="user-image" alt="User Image">
+              <span class="hidden-xs">supervisor</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header">
+                <img src="../../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                <p>
+                  Alexander Pierce - Web Developer
+                  <small>Member since Nov. 2012</small>
+                </p>
+              </li>
+              <!-- Menu Body -->
+              <li class="user-body">
+                <div class="row">
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Followers</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Sales</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Friends</a>
+                  </div>
+                </div>
+                <!-- /.row -->
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                </div>
+                <div class="pull-right">
+                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+          <li>
+            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+           <img src="../../../dist/img/avatar3.png" class="user-image" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>supervisor</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+          <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="header">MAIN NAVIGATION</li>
+    <li class="active treeview menu-open">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="../../../index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
+            <!-- <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li> -->
+          </ul>
+        </li>
+        <!--  /bescom -->
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-laptop"></i>
+            <span>BESCOM</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+           <li><a href="bescom_charts/bescom/a&rt.html"><i class="fa fa-circle-o"></i> A & RT</a></li>
+           <li><a href="bescom_charts/bescom/procurement.html"><i class="fa fa-circle-o"></i> Procurement</a></li>
+           
+           <li><a href="bescom_charts/bescom/powersupply.html"><i class="fa fa-circle-o"></i>Power supply position</a></li>
+           <li><a href="bescom_charts/bescom/powerpurchase.html"><i class="fa fa-circle-o"></i>Power Purchase</a></li>
+            <li><a href="bescom_charts/bescom/dcm.html"><i class="fa fa-circle-o"></i>DCM</a></li>
+
+         </ul>
+       </li>
+
+
+       <!--  /bescom -->
+       <!--  M & C - EA -->
+       <li class="treeview">
+        <a href="#">
+          <i class="fa fa-laptop"></i>
+          <span>M & C - EA</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a href="bescom_charts/mc_ea/ctazjan_mc.html "><i class="fa fa-circle-o"></i>CTAZ-JAN</a></li>
+          <li><a href="bescom_charts/mc_ea/brazjan_mc.html "><i class="fa fa-circle-o"></i>BRAZ-JAN</a></li>
+          <li><a href="bescom_charts/mc_ea/bmaz_mc.html"><i class="fa fa-circle-o"></i>BMAZ</a></li>
+          <li><a href="bescom_charts/mc_ea/24towns_mc.html "><i class="fa fa-circle-o"></i>24 TOWNS</a></li>
+
+        </ul>
+      </li>
+
+      <!--  M & C - EA-->
+
+
+          <!--  operations -->
+   <li class="treeview">
+          <a href="#">
+            <i class="fa fa-share"></i> <span>Operations</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <!-- <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li> -->
+            <li class="treeview">
+              <a href="#"><i class="fa fa-circle-o"></i> GKS
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <!-- <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li> -->
+                <li class="treeview">
+                  <a href="#"><i class="fa fa-circle-o"></i> Corporate Office
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                  </a>
+                  <ul class="treeview-menu">
+                     <li><a href="bmazoperation.html"><i class="fa fa-circle-o"></i> BMAZ(zones)</a></li>
+                     <li class="active"><a href="brazoperation.html"><i class="fa fa-circle-o"></i> BRAZ</a></li>
+                     <li><a href="ctazoperation.html"><i class="fa fa-circle-o"></i> CTAZ</a></li>
+                     <li><a href="bescomtotaloperations.html"><i class="fa fa-circle-o"></i> BESCOM Total</a></li>
+                   </ul>
+                 </li>
+               </ul>
+             </li>
+             <!--  ht&lt ***************************************************************************-->
+             <li class="treeview">
+              <a href="#"><i class="fa fa-circle-o"></i> HT LT Cummulative
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <!-- <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li> -->
+                <li class="treeview">
+                  <a href="#"><i class="fa fa-circle-o"></i> BMAZ(zones)
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                  </a>
+                  <ul class="treeview-menu">
+                   <li><a href="bmazhtlt.html"><i class="fa fa-circle-o"></i> BMAZ(zones)</a></li>
+                   <li class="active"><a href="brazhtlt.html"><i class="fa fa-circle-o"></i> bmazTotal</a></li>
+           <!--  <li><a href="ctazhtlt.html"><i class="fa fa-circle-o"></i> CTAZ</a></li>
+           <li><a href="ctazhtlt.html"><i class="fa fa-circle-o"></i> BMAZ Total</a></li> -->
+         </ul>
+       </li>
+
+
+
+       <li class="treeview">
+        <a href="#"><i class="fa fa-circle-o"></i> BRAZ
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+         <li><a href="bmazhtlt.html"><i class="fa fa-circle-o"></i> BRAZ</a></li>
+         <li class="active"><a href="brazhtlt.html"><i class="fa fa-circle-o"></i> brazTotal</a></li>
+           <!--  <li><a href="ctazhtlt.html"><i class="fa fa-circle-o"></i> CTAZ</a></li>
+           <li><a href="ctazhtlt.html"><i class="fa fa-circle-o"></i> BMAZ Total</a></li> -->
+         </ul>
+       </li>
+
+
+       <li class="treeview">
+        <a href="#"><i class="fa fa-circle-o"></i> CTAZ
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+         <li><a href="bmazhtlt.html"><i class="fa fa-circle-o"></i> CTAZ</a></li>
+         <li class="active"><a href="brazhtlt.html"><i class="fa fa-circle-o"></i> ctazTotal</a></li>
+           <!--  <li><a href="ctazhtlt.html"><i class="fa fa-circle-o"></i> CTAZ</a></li>
+           <li><a href="ctazhtlt.html"><i class="fa fa-circle-o"></i> BMAZ Total</a></li> -->
+         </ul>
+       </li>
+
+       <li class="treeview-menu">
+        <li><a href="bmazhtlt.html"><i class="fa fa-circle-o"></i> Bescom htlt total</a></li>
+              <!--     <ul class="treeview-menu">
+                 <li><a href="bmazhtlt.html"><i class="fa fa-circle-o"></i> Bescom htlt total</a></li>
+                          <li class="active"><a href="brazhtlt.html"><i class="fa fa-circle-o"></i> ctazTotal</a></li>
+                         <li><a href="ctazhtlt.html"><i class="fa fa-circle-o"></i> CTAZ</a></li>
+                          <li><a href="ctazhtlt.html"><i class="fa fa-circle-o"></i> BMAZ Total</a></li>
+                        </ul> -->
+                      </li>
+
+
+
+                    </ul>
+
+
+                  </li>
+                  <!--  Power supply position ***************************************************************************-->
+                  <li class="treeview">
+                    <a href="#"><i class="fa fa-circle-o"></i> Power supply position
+                      <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                      </span>
+                    </a>
+                    <ul class="treeview-menu">
+                      <!-- <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li> -->
+                      <li class="treeview">
+                        <a href="#"><i class="fa fa-circle-o"></i> page3
+                          <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                          </span>
+                        </a>
+                        <ul class="treeview-menu">
+                         <li><a href="bmazhtlt.html"><i class="fa fa-circle-o"></i> BMAZ(zones)</a></li>
+
+                       </ul>
+                     </li>
+
+
+
+                     <li class="treeview">
+                      <a href="#"><i class="fa fa-circle-o"></i> page4
+                        <span class="pull-right-container">
+                          <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                      </a>
+                      <ul class="treeview-menu">
+                       <li><a href="bmazhtlt.html"><i class="fa fa-circle-o"></i> BRAZ</a></li>
+
+                     </ul>
+                   </li>
+                   <li class="treeview">
+                    <a href="#"><i class="fa fa-circle-o"></i> page5
+                      <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                      </span>
+                    </a>
+                    <ul class="treeview-menu">
+                     <li><a href="bmazhtlt.html"><i class="fa fa-circle-o"></i> BRAZ</a></li>
+
+                   </ul>
+                 </li>
+
+                 <li class="treeview">
+                  <a href="#"><i class="fa fa-circle-o"></i> page6
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                  </a>
+                  <ul class="treeview-menu">
+                   <li><a href="bmazhtlt.html"><i class="fa fa-circle-o"></i> BRAZ</a></li>
+
+                 </ul>
+               </li>
+
+
+               <li class="treeview">
+                <a href="#"><i class="fa fa-circle-o"></i> page7
+                  <span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+                </a>
+                <ul class="treeview-menu">
+                 <li><a href="bmazhtlt.html"><i class="fa fa-circle-o"></i> CTAZ</a></li>
+
+               </ul>
+             </li>
+
+             <li class="treeview-menu">
+              <li><a href="bmazhtlt.html"><i class="fa fa-circle-o"></i>page8</a></li>
+
+            </li>
+
+
+
+          </ul>
+
+
+        </li>
+        <!-- ri ,saifi&saidi ********************************************-->
+        <li class="treeview">
+          <a href="#"><i class="fa fa-circle-o"></i> RI, SAIFI & SAIDI
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <!-- <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li> -->
+            <li class="treeview">
+              <a href="#"><i class="fa fa-circle-o"></i>Apr anx i signed copy
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+               <li><a href="saidihtlt.html"><i class="fa fa-circle-o"></i> Apr anx i signed copy</a></li>
+               <li class="active"><a href="saidihtlt.html"><i class="fa fa-circle-o"></i> sheet1</a></li>
+               <li><a href="saidihtlt.html"><i class="fa fa-circle-o"></i> sheet2</a></li>
+               <li><a href="saidihtlt.html"><i class="fa fa-circle-o"></i> sheet3</a></li>
+               <li><a href="saidihtlt.html"><i class="fa fa-circle-o"></i> sheet4</a></li>
+             </ul>
+           </li>
+         </ul>
+       </li>
+       <!-- Transformer Statistics -->
+       <li class="treeview">
+        <a href="#"><i class="fa fa-circle-o"></i> Transformer Statistics
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <!-- <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li> -->
+          <li class="treeview">
+            <a href="#"><i class="fa fa-circle-o"></i>Apr anx i signed copy
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+             <li><a href="transformer.html"><i class="fa fa-circle-o"></i> jan-18 Annexure-1</a></li>
+             <li class="active"><a href="transformer.html"><i class="fa fa-circle-o"></i> sheet1</a></li>
+
+           </ul>
+         </li>
+       </ul>
+     </li>
+
+  <!-- water-works-->
+
+             <li class="treeview">
+              <a href="#"><i class="fa fa-circle-o"></i>  Water Works
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <!-- <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li> -->
+                <li class="treeview">
+                  <a href="#"><i class="fa fa-circle-o"></i> BMAZ(zones)
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                  </a>
+                  <ul class="treeview-menu">
+                   <li><a href="bmaz_ww.html"><i class="fa fa-circle-o"></i> BMAZ(zones)</a></li>
+                   <li class="active"><a href="bmaz_ww_total.html"><i class="fa fa-circle-o"></i> bmazTotal</a></li>
+           <!--  <li><a href="ctazhtlt.html"><i class="fa fa-circle-o"></i> CTAZ</a></li>
+           <li><a href="ctazhtlt.html"><i class="fa fa-circle-o"></i> BMAZ Total</a></li> -->
+         </ul>
+       </li>
+
+
+
+       <li class="treeview">
+        <a href="#"><i class="fa fa-circle-o"></i> BRAZ
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+         <li><a href="braz_ww.html"><i class="fa fa-circle-o"></i> BRAZ</a></li>
+         <li class="active"><a href="braz_ww_total.html"><i class="fa fa-circle-o"></i> brazTotal</a></li>
+           <!--  <li><a href="ctazhtlt.html"><i class="fa fa-circle-o"></i> CTAZ</a></li>
+           <li><a href="ctazhtlt.html"><i class="fa fa-circle-o"></i> BMAZ Total</a></li> -->
+         </ul>
+       </li>
+
+
+       <li class="treeview">
+        <a href="#"><i class="fa fa-circle-o"></i> CTAZ
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+         <li><a href="ctaz_ww.html"><i class="fa fa-circle-o"></i> CTAZ</a></li>
+         <li class="active"><a href="ctaz_ww_total.html"><i class="fa fa-circle-o"></i> ctazTotal</a></li>
+           <!--  <li><a href="ctazhtlt.html"><i class="fa fa-circle-o"></i> CTAZ</a></li>
+           <li><a href="ctazhtlt.html"><i class="fa fa-circle-o"></i> BMAZ Total</a></li> -->
+         </ul>
+       </li>
+
+       <li class="treeview-menu">
+        <li><a href="bescom_ww_total.html"><i class="fa fa-circle-o"></i> Bescom htlt total</a></li>
+             
+                      </li>
+
+
+
+                    </ul>
+
+
+                  </li>  <!-- ******/water work-->
+
+
+
+
+
+                </ul>
+              </li>      <!-- //operations -->
+    
+       
+   
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+          DAVANAGERE
+        <small>Range of % losses for Jan-2018</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Charts</a></li>
+        <li class="active">chitradurga</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- AREA CHART -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">CHITRADURGA
+                  <small>Division Name</small>
+              </h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <div class="chart">
+              <div id="js-legend" class="chart-legend"></div>
+               <canvas id="barChart1" style="height:230px"></canvas>
+                  
+            <!--   <canvas id="areaChart" style="height:250px"></canvas> -->
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+
+          <!-- DONUT CHART -->
+         <!--  <div class="box box-danger">
+           <div class="box-header with-border">
+             <h3 class="box-title">Poles</h3>
+         
+             <div class="box-tools pull-right">
+               <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+               </button>
+               <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+             </div>
+           </div>
+           <div class="box-body">
+            <div class="chart">
+            <canvas id="pieChart" style="height:250px"></canvas>
+              <canvas id="barChartt" style="height:230px"></canvas></div>
+           </div>
+           /.box-body
+         </div> -->
+          <!-- /.box -->
+
+        </div>
+        <!-- /.col (LEFT) -->
+       <!--  <div class="col-md-6">
+         LINE CHART
+         <div class="box box-info">
+           <div class="box-header with-border">
+             <h3 class="box-title">Conductor</h3>
+       
+             <div class="box-tools pull-right">
+               <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+               </button>
+               <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+             </div>
+           </div>
+           <div class="box-body">
+             <div class="chart">
+             <canvas id="barChart2" style="height:230px"></canvas>
+               <canvas id="lineChart" style="height:250px"></canvas>
+             </div>
+           </div>
+           /.box-body
+         </div>
+         /.box
+       
+         BAR CHART
+         <div class="box box-success">
+           <div class="box-header with-border">
+             <h3 class="box-title">Cable</h3>
+       
+             <div class="box-tools pull-right">
+               <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+               </button>
+               <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+             </div>
+           </div>
+           <div class="box-body">
+             <div class="chart">
+               <canvas id="barChart" style="height:230px"></canvas>
+             </div>
+           </div>
+           /.box-body
+         </div>
+         /.box
+       
+       </div> -->
+        <!-- /.col (RIGHT) -->
+      </div>
+      <!-- /.row -->
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 2.4.0
+    </div>
+    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+    reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Create the tabs -->
+    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+      <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!-- Home tab content -->
+      <div class="tab-pane" id="control-sidebar-home-tab">
+        <h3 class="control-sidebar-heading">Recent Activity</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                <p>Will be 23 on April 24th</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-user bg-yellow"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
+
+                <p>New phone +1(800)555-1234</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
+
+                <p>nora@example.com</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-file-code-o bg-green"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
+
+                <p>Execution time 5 seconds</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+        <h3 class="control-sidebar-heading">Tasks Progress</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript:void(0)">
+              <h4 class="control-sidebar-subheading">
+                Custom Template Design
+                <span class="label label-danger pull-right">70%</span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h4 class="control-sidebar-subheading">
+                Update Resume
+                <span class="label label-success pull-right">95%</span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-success" style="width: 95%"></div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h4 class="control-sidebar-subheading">
+                Laravel Integration
+                <span class="label label-warning pull-right">50%</span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h4 class="control-sidebar-subheading">
+                Back End Framework
+                <span class="label label-primary pull-right">68%</span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+      </div>
+      <!-- /.tab-pane -->
+      <!-- Stats tab content -->
+      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+      <!-- /.tab-pane -->
+      <!-- Settings tab content -->
+      <div class="tab-pane" id="control-sidebar-settings-tab">
+        <form method="post">
+          <h3 class="control-sidebar-heading">General Settings</h3>
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Report panel usage
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+
+            <p>
+              Some information about this general settings option
+            </p>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Allow mail redirect
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+
+            <p>
+              Other sets of options are available
+            </p>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Expose author name in posts
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+
+            <p>
+              Allow the user to show his name in blog posts
+            </p>
+          </div>
+          <!-- /.form-group -->
+
+          <h3 class="control-sidebar-heading">Chat Settings</h3>
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Show me as online
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Turn off notifications
+              <input type="checkbox" class="pull-right">
+            </label>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Delete chat history
+              <a href="javascript:void(0)" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
+            </label>
+          </div>
+          <!-- /.form-group -->
+        </form>
+      </div>
+      <!-- /.tab-pane -->
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 3 -->
+<script src="../../../bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- ChartJS -->
+<script src="../../../bower_components/chart.js/Chart.js"></script>
+<!-- FastClick -->
+<script src="../../../bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../../dist/js/demo.js"></script>
+<!-- page script -->
+<script>
+  $(function () {
+    /* ChartJS
+     * -------
+     * Here we will create a few charts using ChartJS
+     */
+
+    //--------------
+    //- AREA CHART -
+    //--------------
+
+    // Get context with jQuery - using jQuery's .get() method.
+    var areaChartCanvas = $('#barChart1').get(0).getContext('2d')
+    // This will get the first returned node in the jQuery collection.
+    var barChart       = new Chart(areaChartCanvas)
+
+    /*data*/
+   var agridata = [0, 23, 19, 24, 5, 1, 72];
+
+
+
+var commdata = [0, 0, 0, 1, 0, 0, 1];
+
+var industrialdata = [1, 0, 0, 1, 0, 0, 2];
+
+var mixedloaddata = [6, 5, 4, 49, 3, 15, 82];
+
+var njydata = [0, 0, 0, 31, 7, 3, 41];
+
+var waterworksdata = [0, 0, 0, 1, 0, 1, 2];
+
+var blankdata = [0, 0, 0, 4, 8, 0, 12];
+  
+/*AGRI
+COMMERCIAL
+INDUSTRIAL
+MIXED LOAD
+NJY
+WATER WORKS
+(blank)*/
+
+
+/*(3 Star Rated)*/
+
+
+    var areaChartData = {
+      labels  : ["Less than 5%","5 to 10%","10 to 15%","More than 15%","MNR","Negative","Grand Total"],
+      datasets: [
+        {
+          label               : 'AGRI',
+          fillColor           : 'rgba(210, 214, 222, 1)',
+          strokeColor         : 'rgba(210, 214, 222, 1)',
+          pointColor          : 'rgba(210, 214, 222, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(220,220,220,1)',
+          data                : agridata
+        },
+        {
+          label               : 'COMMERCIAL',
+          fillColor           : 'rgba(60,141,188,0.9)',
+          strokeColor         : 'rgba(60,141,188,0.8)',
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : commdata
+        },
+        {
+          label               : 'INDUSTRIAL',
+          fillColor           : '#e6e600',
+          strokeColor         : 'rgba(255,221,50,1)',
+          pointColor          : 'rgba(255,221,50,1)',
+          pointStrokeColor    : 'rgba(255,221,50,1)',
+          pointHighlightFill  : 'rgba(255,221,50,1)',
+          pointHighlightStroke: 'rgba(255,221,50,1)',
+          data                : industrialdata
+        },
+
+         {
+          label               : 'MIXED LOAD',
+          fillColor           : '#8e5ea2',
+          strokeColor         : 'rgba(60,186,159,0.2)',
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(60,186,159,0.2)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                :  mixedloaddata
+        },
+         {
+          label               : 'NJY',
+          fillColor           : '#3cba9f',
+          strokeColor         : 'rgba(60,141,188,0.8)',
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                :  njydata
+        },
+        {
+          label               : 'WATER WORKS',
+          fillColor           : '#e8c3b9',
+          strokeColor         : 'rgba(210, 214, 222, 1)',
+          pointColor          : 'rgba(210, 214, 222, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(220,220,220,1)',
+          data                : waterworksdata
+        },
+
+
+        {
+          label               : 'Blank',
+          fillColor           : '#c45850',
+          strokeColor         : '#c45850',
+          pointColor          : '#c45850',
+          pointStrokeColor    : '#c45850',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: '#c45850',
+          data                : blankdata
+        }      
+      ]
+    }
+
+    var barChartOptions     = {
+  scaleBeginAtZero        : true,
+      //Boolean - Whether grid lines are shown across the chart
+      scaleShowGridLines      : true,
+      //String - Colour of the grid lines
+      scaleGridLineColor      : 'rgba(0,0,0,.05)',
+      //Number - Width of the grid lines
+      scaleGridLineWidth      : 1,
+      //Boolean - Whether to show horizontal lines (except X axis)
+      scaleShowHorizontalLines: true,
+      //Boolean - Whether to show vertical lines (except Y axis)
+      scaleShowVerticalLines  : true,
+      //Boolean - If there is a stroke on each bar
+      barShowStroke           : true,
+      //Number - Pixel width of the bar stroke
+      barStrokeWidth          : 2,
+      //Number - Spacing between each of the X value sets
+      barValueSpacing         : 5,
+      //Number - Spacing between data sets within X values
+      barDatasetSpacing       : 1,
+      //String - A legend template
+      legendTemplate          : '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<datasets.length; i++){%><li><span style="background-color:<%=datasets[i].fillColor%>"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>',
+      //Boolean - whether to make the chart responsive
+      responsive              : true,
+      maintainAspectRatio     : true
+
+    }
+    barChartOptions.datasetFill = false
+    var legend=barChart.Bar(areaChartData, barChartOptions)
+     document.getElementById("js-legend").innerHTML = legend.generateLegend();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  })
+
+</script>
+</body>
+</html>
+<style type="text/css">
+  #js-legend ul {
+  list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#js-legend ul li {
+  display: inline;
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 4px;
+  border-radius: 5px;
+  padding: 2px 8px 2px 28px;
+  font-size: 14px;
+  cursor: default;
+  -webkit-transition: background-color 200ms ease-in-out;
+  -moz-transition: background-color 200ms ease-in-out;
+  -o-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+
+#js-legend li span {
+display: inline;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  border-radius: 5px;
+}
+
+</style>

@@ -1,0 +1,268 @@
+
+    <section class="content-header">
+        <h1>
+          ELECTRICITY SUPPLY
+        <small>BANGALORE ELECTRICITY SUPPLY COMPANY LIMITED</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Charts</a></li>
+        <li class="active">sheet1</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- AREA CHART -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">HIGH VOLTAGE DISTRIBUTION SYSTEM (HVDS) PHASE-II
+                  <small>CUMULATIVE PHYSICAL PROGRESS OF HVDS WORKS </small>
+              </h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+            <div class="form-group">
+              <label>Name of the Work</label>
+              <select class="selectpicker test" id="chartType">
+      
+                 <option value="pie1"> Extension of new 11KV line  </option>
+                 <option value="pie1">Conversion of Existing LT line into HT line</option>
+                 <option value="pie3">Running of New of 11KV line using AB cable</option>
+                 <option value="pie4">Running of New LT line using LT AB size of 3X35+1X25 Sq mm</option>
+                  <option value="pie5">Erection & Commissioning of 3Star 25kVA DTC’s</option>
+          
+          
+            </select>
+ 
+
+
+
+
+
+
+
+
+              </div>
+              <div class="chart">
+
+              	<!--  select bar chart -->
+
+
+              	<div id="js-legend" class="chart-legend" align="center"></div>
+              	<canvas id="barChart1" style="height:430px"></canvas>
+
+              	<!--   <canvas id="areaChart" style="height:250px"></canvas> -->
+              </div>
+          </div>
+          <!-- /.box-body -->
+      </div>
+
+
+  </div>
+
+</div>
+      <!-- /.row -->
+
+    </section>
+   
+<script>
+  $(function () {
+    /* ChartJS
+     * -------
+     * Here we will create a few charts using ChartJS
+     */
+
+    //--------------
+    //- AREA CHART -
+    //--------------
+   var ctx = document.getElementById("barChart1").getContext("2d");
+
+    /*data*/
+
+var labelData=[
+]
+
+var label = ["Qty as per DWA","Qty as per Survey",
+    "Progress as on prev month(Dec-2017)",
+    "Target fixed for the month of Jan-2018",
+    "Progress for the month of Jan-2018",
+    "Cumulative Progress as on Jan-2018",
+    "% Physical progress against Survey Qty",
+    "% Physical progress against DWA Qty"];
+
+  
+var rowtwo=[
+"Extension_of_new_11KV_line",
+"Conversion_of_Existing_LT_line_into_HT_line",
+"Running_of_New_of_11KV_line_using_AB_cable",
+"Running_of_New_LT_line_using_LT_AB_size_of_3X35+1X25 Sq mm",
+"Erection_And_Commissioning_of_3Star_25kVA_DTCs"  
+];
+
+ rowtwo['0'] =[579.25,
+                 722.07,
+                 505.24,
+                 216.83,
+                 0.00,
+                 505.24,
+                 69.97,
+                 87.22];
+                 
+ rowtwo['1'] = [2878.98,
+                        1184.50,
+                        847.76,
+                        336.74,
+                        0.00,
+                        847.76,
+                        71.57,
+                        29.45];
+
+ rowtwo['2'] = [25.80,
+                        32.23,
+                        10.16,
+                        22.07,
+                        0.00,
+                        10.16,
+                        31.52,
+                        39.38];
+                        
+ rowtwo['3'] = [
+                                471.00,
+                                639.92,
+                                365.94,
+                                273.98,
+                                0.00,
+                                365.94,
+                                57.19,
+                                77.69
+                               ];
+                               
+ rowtwo['4'] = [
+                          11406,
+                          13208,
+                          10076,
+                          3132,
+                          222,
+                          10298,
+                          77.97,
+                          90.29
+                          ];
+
+
+
+
+var dataMap = {};
+for(row=0;row<rowtwo.length;row++){
+  var obj={};
+  obj['method']='Bar';
+  
+  var rowdata = {};
+  rowdata['label'] = labelData[row];
+  rowdata['fillColor'] = 'rgba(60,141,188,0.9)';
+  rowdata['data'] = rowtwo[row];
+
+
+  var mainData={};
+  mainData['labels']=label;
+  mainData['datasets'] = [];
+ mainData['datasets'].push(rowdata);
+
+
+  obj['data']=mainData;
+
+  var newIndex='pie'+(row+1);
+  dataMap[newIndex]=obj;
+}
+console.log(dataMap);
+
+
+
+
+
+
+
+
+   
+var currentChart;
+
+ function updateChart() {
+     if(currentChart){currentChart.destroy();}
+   
+     var determineChart = $("#chartType").val();
+
+     var params = dataMap[determineChart]
+      currentChart = new Chart(ctx)[params.method](params.data, {});
+      var legend=currentChart;
+          document.getElementById("js-legend").innerHTML = legend.generateLegend();
+
+ }
+
+
+ $('#chartType').on('click', updateChart)
+ updateChart();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  })
+
+</script>
+</body>
+</html>
+<style type="text/css">
+  #js-legend ul {
+  list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#js-legend ul li {
+  display: inline;
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 4px;
+  border-radius: 5px;
+  padding: 2px 8px 2px 28px;
+  font-size: 14px;
+  cursor: default;
+  -webkit-transition: background-color 200ms ease-in-out;
+  -moz-transition: background-color 200ms ease-in-out;
+  -o-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+
+#js-legend li span {
+display: inline;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  border-radius: 5px;
+}
+
+</style>
